@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Start z kontenerami Docker dla .NET, GO, Python, Java Spring i NodeJs i gdzie w tym Kubernetes</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,900&amp;subset=latin-ext" rel="stylesheet" />
+    <!-- Shower Theme -->
+    <link rel="stylesheet" href="vendors/shower-ribbon/styles/screen-16x9.css" />
+    <link rel="stylesheet" href="vendors/shower-CezaryWalenciuk/styles/main.css" />
+    <!-- Prism.js -->
+    <link rel="stylesheet" href="vendors/prism/prism-my.css" />
+    <link rel="stylesheet" href="vendors/prism/custom-prism.css" />
+    <link rel="stylesheet" href="codegrid.css" />
+</head>
+<body class="shower list">
+    <header class="caption">
+        <h1>Start z kontenerami Docker dla .NET, GO, Python, Java Spring i NodeJs i gdzie w tym Kubernetes</h1>
+        <p></p>
+    </header>
+
+    <section class="slide front-page">
+
+        <div class="details">
+            <!-- 1. Avatar -->
+
+
+            <h2>Cezary Walenciuk</h2>
+
+            <!-- 3. Presentation title -->
+            <h2 class="bigbig"><strong style="font-size: 35px;  line-height: 1.3;">
+
+                    <span class="titlec1">Start z kontenerami Docker dla </span>
+                    <br />
+                    <span class="titlec5">.NET, GO, Python, Java Spring i NodeJs </span>
+                    <span class="titlec3">i gdzie w tym Kubernetes</span></strong></h2>
+
+
+
+            <!-- 5. Contact the speaker -->
+            <h2><a href="https://twitter.com/WalenciukC">@walenciukC</a></h2>
+        </div>
+        <div>
+
+
+            <!-- 2. Speaker -->
+
+        </div>
+        <div class="imag">
+            <img src="images/my-avatar.jpg" alt="Speaker">
+        </div>
+    </section>
+
+
+
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/facepalm1.png" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/facepalm2.png" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide backgroundOrginal" >
+        <figure>
+            <img class="cover" src="pictures/idealnyprogramista.png" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/KUBERNESTES0.png" alt="blog">
+            <figcaption class="white">Copyright © 2020 Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/KUBERNESTES.png" alt="blog">
+            <figcaption class="white">Copyright © 2020 Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/KUBERNESTES2.png" alt="blog">
+            <figcaption class="white">Copyright © 2020 Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/KUBERNESTES0.png" alt="blog">
+            <figcaption class="white">Copyright © 2020 Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGG   compact ">
+        <h2>Jak to wygląda ? Jeśli mówimy tylko o Docker</h2>
+        <ol class="nonumbers">
+            <li class="next">Docker tworzy obraz poprzez dockerfile. </li>
+            <li class="next">Docker uruchamia obraz i teraz "to" nazywamy kontenerem</li>
+        </ol>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>Docker tworzy obraz<br />Uruchomiony obraz to kontener
+        </span></span>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>Co to oznacza, że aplikacja jest skonteneryzowana
+        </span></span>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>Zamiast gadać to lepiej to pokazać
+        </span></span>
+    </section>
+
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>Zbudujmy coś
+        </span></span>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>Zbudujmy statyczną stronę na serwerze Apache
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_01.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_02.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">Dockerfile file dla statycznych plików</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 25px;overflow: hidden;  " class="language-docker">
+                    <code style="line-height: 25px !important;">
+                        FROM httpd:2.4
+
+                        COPY ./index.html /usr/local/apache2/htdocs/index.html
+                        COPY ./bakcground.jpg /usr/local/apache2/htdocs/bakcground.jpg
+                        COPY ./wordart.png /usr/local/apache2/htdocs/wordart.png
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">Dockerfile file dla statycznych plików</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 35px;overflow: hidden;  " class="language-docker">
+                    <code style="line-height: 35px !important;">
+                        FROM httpd:2.4
+
+                        COPY ./* /usr/local/apache2/htdocs/
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_02_1.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_03.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_14.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_07.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_07.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_08.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_09.png" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_10.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_11.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_12.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_13.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>Swoją drogą używanie Dockera/Kubernetesa do statycznych plików to idiotyzm
+        </span></span>
+    </section>
+    <section class="slide creamGG   compact ">
+        <h2>Co konteryzować?</h2>
+        <ol class="nonumbers">
+            <li class="next">exe - do zadań</li>
+            <li class="next">API</li>
+            <li class="next">Web App</li>
+        </ol>
+    </section>
+    <section class="slide creamGG   compact ">
+        <h2>Co nie konteryzować?</h2>
+        <ol class="nonumbers">
+            <li class="next">Mobile App</li>
+            <li class="next">Desktop App</li>
+            <li class="next">Małe projekty</li>
+        </ol>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>Problemy z budowaniem obrazu ?
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_15.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_15-1.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_03.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>Po co są tagi ?
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_16.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>Czy mogę wybrać inny port?
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieobrazu_17.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>Zbudujmy aplikację Go
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/od kiedy ty umiesz Go.png" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieGo-01.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">go.mod</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 45px;overflow: hidden;  " class="language-go">
+                    <code style="line-height: 45px !important;">
+                        module helloapp
+
+                        go 1.15
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">main.go</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 25px;overflow: hidden;  " class="language-go">
+                    <code style="line-height: 25px !important;">
+                        package main 
+
+                        import (
+                            "fmt"
+                            "log"
+                            "net/http"
+                        )
+                        
+                        func handler(w http.ResponseWriter, r *http.Request) {
+                        
+                            fmt.Fprintln(w, "Cześć");
+                        }
+                        
+                        func main() {
+                            http.HandleFunc("/",handler)
+                            fmt.Println("server started")
+                            log.Fatal(http.ListenAndServe(":8090", nil))
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">Dockerfile</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 29px;overflow: hidden;  " class="language-docker">
+                    <code style="line-height: 29px !important;">
+                        FROM golang:latest
+
+                        #ustawia pracujący folder
+                        WORKDIR /helloApp
+                        
+                        #kopiuje to pliki na kontener
+                        ADD . .
+                        
+                        #budujemy aplikacje
+                        RUN go build -o main .
+                        
+                        EXPOSE 8090
+                        
+                        CMD ["/helloApp/main"]
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieGo-01.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieGo-02.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieGo-03.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieGo-04.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieGo-05.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieGo-06.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+
+
+    <section class="slide creamGG   compact ">
+        <h2>Argumenty</h2>
+        <ol class="nonumbers">
+            <li class="next">-it : uruchamia w środowisku interakcyjnym</li>
+            <li class="next">-rm : usuwa automatycznie kontener bo zakończeniu</li>
+            <li class="next">-p : ustawia przekierowanie portów wewnątrz aplikacji np. z 8090 na 90</li>
+        </ol>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieGo-07.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieGo-08.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>Co można zrobić lepiej?
+        </span></span>
+    </section>
+    <section class="slide creamGG   compact ">
+        <h2>Co można zrobić lepiej?</h2>
+        <ol class="nonumbers">
+            <li class="next">Pracujemy na konkretnej wersji obrazu</li>
+            <li class="next">Kopiujemy wybrane pliki</li>
+        </ol>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">Dockerfile fixed</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 29px;overflow: hidden;  " class="language-docker">
+                    <code style="line-height: 29px !important;">
+                        FROM golang:1.13-alpine AS build
+
+                        #ustawia pracujący folder
+                        WORKDIR /src
+                        
+                        COPY main*.go go.* ./
+                        
+                        #budujemy aplikacje
+                        RUN CGO_ENABLED=0 go build -o /bin/example2_2
+                        
+                        FROM scratch
+                        COPY --from=build /bin/example2_2 /bin/example2_2
+                        
+                        EXPOSE 8090
+                        
+                        CMD ["/bin/example2_2"]
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieGo-09.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieGo-10.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieGo-10-1.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieGo-11.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>Zbudujmy obraz .NET Core 3.1
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieNet-01.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/DOCKERignore.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/DOCKERignore_01.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">Program.cs</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 29px;overflow: hidden;  " class="language-csharp">
+                    <code style="line-height: 29px !important;">
+
+                        class Program
+                        {
+                            static async Task Main(string[] args)
+                            {
+                                var counter = 0;
+                                var max = args.Length != 0 
+                                ? Convert.ToInt32(args[0]) : -1;
+
+                                while (max == -1 || counter < max)
+                                {
+                                    
+                                    Console.WriteLine($"Counter: {++counter}");
+                                    await Task.Delay(1000);
+                                }
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">Byle jaki Docker file dla .NET Core 3.1 </h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 31px;overflow: hidden;  " class="language-docker">
+                    <code style="line-height: 31px !important;">
+                        FROM mcr.microsoft.com/dotnet/aspnet:3.1
+                        
+                        COPY bin/Release/netcoreapp3.1/publish/ App/
+                        WORKDIR /App
+                        ENTRYPOINT ["dotnet", "NetCore.DockerTest.dll"]
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide creamGG   compact ">
+        <h2>Ten docker file zakłada</h2>
+        <ol class="nonumbers">
+            <li class="next">Aplikacja mam już pobrane paczki Nuget</li>
+            <li class="next">Aplikacja jest już zbudowana lub upublikowana</li>
+            <li class="next">Pobierze wszysto w tym nie potrzebne pliki</li>
+        </ol>
+    </section>
+
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieNet-02.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieNet-03.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieNet-04.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieNet-05.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieNet-06.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieNet-07.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieNet-08.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieNet-09.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors"  style="font-size: 150% !important;" >
+            <span>
+                Zobaczmy jak zrobić dobry docker file dla .NET Core<br />
+                Przykład .NET na tym GitHub <br />
+                <a href="https://github.com/dotnet/dotnet-docker">https://github.com/dotnet/dotnet-docker</a>
+            </span>
+        </span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieNet-10.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">Dobry Docker file dla ASP.NET CORE for .Net 5</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 24px;overflow: hidden;  " class="language-docker">
+                    <code style="line-height: 24px !important;">
+
+                        # https://hub.docker.com/_/microsoft-dotnet
+                        FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+                        WORKDIR /source
+                        
+                        # copy csproj and restore as distinct layers
+                        COPY *.sln .
+                        COPY aspnetapp/*.csproj ./aspnetapp/
+                        RUN dotnet restore
+                        
+                        # copy everything else and build app
+                        COPY aspnetapp/. ./aspnetapp/
+                        WORKDIR /source/aspnetapp
+                        RUN dotnet publish -c release -o /app --no-restore
+                        
+                        # final stage/image
+                        FROM mcr.microsoft.com/dotnet/aspnet:5.0
+                        WORKDIR /app
+                        COPY --from=build /app ./
+                        ENTRYPOINT ["dotnet", "aspnetapp.dll"]
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieNet-11.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">Docker file dla kilku aplikacji w projekcie</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 14px;overflow: hidden;  " class="language-docker">
+                    <code style="line-height: 14px !important;">
+                        # https://hub.docker.com/_/microsoft-dotnet
+                        FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+                        WORKDIR /source
+                        
+                        # copy csproj and restore as distinct layers
+                        COPY complexapp/*.csproj complexapp/
+                        COPY libfoo/*.csproj libfoo/
+                        COPY libbar/*.csproj libbar/
+                        RUN dotnet restore complexapp/complexapp.csproj
+                        
+                        # copy and build app and libraries
+                        COPY complexapp/ complexapp/
+                        COPY libfoo/ libfoo/
+                        COPY libbar/ libbar/
+                        WORKDIR /source/complexapp
+                        RUN dotnet build -c release --no-restore
+                        
+                        # test stage -- exposes optional entrypoint
+                        # target entrypoint with: docker build --target test
+                        FROM build AS test
+                        WORKDIR /source/tests
+                        COPY tests/ .
+                        ENTRYPOINT ["dotnet", "test", "--logger:trx"]
+                        
+                        FROM build AS publish
+                        RUN dotnet publish -c release --no-build -o /app
+                        
+                        # final stage/image
+                        FROM mcr.microsoft.com/dotnet/runtime:5.0
+                        WORKDIR /app
+                        COPY --from=publish /app .
+                        ENTRYPOINT ["dotnet", "complexapp.dll"]
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>Zbudujmy obraz Java Spring
+        </span></span>
+    </section>
+    
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>..ale zaraz ja nie znam Javy xD
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/od kiedy ty umiesz Jave.png" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieJavaSpring-01.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">DemoApplication.java</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 25px;overflow: hidden;  " class="language-java">
+                    <code style="line-height: 25px !important;">
+                        package com.example.demo;
+
+                        import org.springframework.boot.SpringApplication;
+                        import org.springframework.boot.autoconfigure.SpringBootApplication;
+                        
+                        @SpringBootApplication
+                        public class DemoApplication {
+                        
+                            public static void main(String[] args) {
+                                SpringApplication.run(DemoApplication.class, args);
+                            }
+                        
+                        }
+                        
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">HelloController.java</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 25px;overflow: hidden;  " class="language-java">
+                    <code style="line-height: 25px !important;">
+                        package com.example.demo;
+
+                        import org.springframework.web.bind.annotation.RestController;
+                        import org.springframework.web.bind.annotation.RequestMapping;
+                        
+                        @RestController
+                        public class HelloController {
+                        
+                            @RequestMapping("/")
+                            public String index() {
+                                return "Pozdrowienia z Spring Boot!";
+                            }
+                        
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">Docker file for Java Spring</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 22px;overflow: hidden;  " class="language-docker">
+                    <code style="line-height: 22px !important;">
+                        #pierwszy etap budowania aplikacji użyje obrazu rodzica maven 3.6.1
+                        FROM maven:3.6.1-jdk-8-alpine AS MAVEN_BUILD 
+
+                        # kopiowanie pom i src do kontenera
+                        COPY ./ ./  
+
+                        # pakowanie kodu naszej aplikacji
+                        RUN mvn clean package 
+
+                        #drugi etap budowania aplikacji używając jdk 8 na alpine 3.9
+                        FROM openjdk:8-jre-alpine3.9 
+
+                        # skopiuj tylko to co potrzebujemy z pierwszego etapu, a wszystko inne odrzuć
+                        COPY --from=MAVEN_BUILD /target/demo-0.0.1-SNAPSHOT.jar /demo.jar 
+
+                        # ustaw polecenie startowe aby uruchomić JAR
+                        CMD ["java", "-jar", "/demo.jar"]
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieJavaSpring-02.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieJavaSpring-03.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowanieJavaSpring-04.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>Zbudujmy obraz Python
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/od kiedy ty umiesz Pythona.png" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowaniePython-01.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">Docker file for Python</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 45px;overflow: hidden;  " class="language-docker">
+                    <code style="line-height: 45px !important;">
+                        FROM python:3
+
+                        ADD my_script.py /
+                        
+                        RUN pip install pystrich
+                        
+                        CMD [ "python", "./my_script.py" ]
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle"> 
+                <h2 class="headerCODE">myscript.py</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 31px;overflow: hidden;  " class="language-python">
+                    <code style="line-height: 31px !important;">
+                        from pystrich.datamatrix import DataMatrixEncoder
+
+                        encoder = DataMatrixEncoder('This is a DataMatrix.')
+                        encoder.save('./datamatrix_test.png')
+                        print(encoder.get_ascii())
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowaniePython-02.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/budowaniePython-03.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>Przykład dobrego dockerfile na podstawie NodeJS
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/od kiedy ty umiesz nodejs.png" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/poprawka/01.PNG" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>1 . Kolejność instrukcji czyli co warto wsadzić w cache
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/poprawka/02.png" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>2 . Bardziej specyficzne kopiowanie
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/poprawka/03.png" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>3 . Łączenie poleceń
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/poprawka/04.png" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>4 . Usuń zbędne rzeczy
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/poprawka/05.png" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/poprawka/06.png" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGG">
+        <span class="shout colors" ><span>5. Ustal konkretną wersje obrazu i wbierz najmniejszą
+        </span></span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/poprawka/07.png" alt="blog">
+            <figcaption class="white">Copyright © 2020 Diagram</figcaption>
+        </figure>
+    </section>
+    <section class="slide creamGG   compact ">
+        <h2>Podsumowanie Docker</h2>
+        <ol class="nonumbers">
+            <li class="next">Uważaj na kontekst i pliki wrzucane do obrazu w trakcie build</li>
+            <li class="next">Kolejność wykonywania instrukcji COPY,RUN czy ADD ma znaczenie</li>
+        </ol>
+    </section>
+    <section class="slide creamGG   compact ">
+        <h2>Podsumowanie Docker</h2>
+        <ol class="nonumbers">
+            <li class="next">Użyj obrazów bazowych</li>
+            <li class="next">Buduj obrazy w docker wykorzystując wieloetapowy build</li>
+        </ol>
+    </section>
+
+    <section class="slide creamPP">
+        <span class="shout colors" ><span>Pogadajmy o Kubernetes
+        </span></span>
+    </section>
+    
+
+    <!-- <div class="progress"></div> -->
+    <footer class="badge badge-top-left">
+        <a href="#" class="fullscreen">Fullscreen</a>
+    </footer>
+
+    <script src="vendors/gamepad/gamepad.js"></script>
+    <script src="vendors/shower/shower.min.js"></script>
+    <script src="vendors/shower-gamepad/shower.gamepad.js"></script>
+
+    <!-- Prism.js -->
+    <script src="vendors/prism/prism.js"></script>
+    <script src="vendors/prism/custom-prism.js"></script>
+
+</body>
+
+</html>
